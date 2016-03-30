@@ -1,0 +1,53 @@
+{
+    "title": "Test site",
+    "meta": [],
+    "root": {
+        "id": "root",
+        "type": "block",
+        "content": [
+            {
+                "id": "header",
+                "type": "block",
+                "content": [
+                    {
+                        "id": "page_title",
+                        "type": "block",
+                        "content": "<%= page_title %>"
+                    },
+                    {
+                        "id": "page_title",
+                        "type": "block",
+                        "content": "Menu"
+                    }
+                ]
+            },
+            {
+                "id": "page_content",
+                "type": "block",
+                "content": "<%= page_content %>"
+            },
+            {
+                "id": "navigation",
+                "type": "block",
+                "content": [
+                    {
+                        "id": "navigation_close",
+                        "type": "block",
+                        "content": "Close"
+                    },
+                    {
+                        "id": "navigaton_content",
+                        "type": "block",
+                        "content": [
+                            {
+                                "id": "navigaton_list",
+                                "type": "data_source",
+                                "content": "stubs/taxonomy"
+                            }
+                        ]
+                    }
+                ]
+            }
+        ]
+    }
+}
