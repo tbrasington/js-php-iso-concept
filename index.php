@@ -1,14 +1,20 @@
+<!DOCTYPE html>
 <?php
-
-	
 $doc = new DOMDocument;
 $html = $doc->appendChild($doc->createElement('html'));
 $head = $html->appendChild($doc->createElement('head'));
 
+ 	
 $script = $head->appendChild($doc->createElement('script'));
-	$script->setAttribute('src', 'index.js');
+ 	$script->setAttribute('src', 'libs/jquery-2.2.2.min.js');
 
+$script = $head->appendChild($doc->createElement('script'));
+ 	$script->setAttribute('src', 'libs/underscore.js');
 
+$script = $head->appendChild($doc->createElement('script'));
+ 	$script->setAttribute('src', 'index.js');
+ 	
+ 	
 $body = $html->appendChild($doc->createElement('body'));
  
  
