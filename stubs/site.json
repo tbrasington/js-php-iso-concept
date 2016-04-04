@@ -12,10 +12,10 @@
                     {
                         "id": "page_title",
                         "type": "block",
-                        "content": "<%= page_title %>"
+                        "content": "{{page_title}}"
                     },
                     {
-                        "id": "page_title",
+                        "id": "menu_button",
                         "type": "block",
                         "content": "Menu"
                     }
@@ -24,7 +24,7 @@
             {
                 "id": "page_content",
                 "type": "block",
-                "content": "<%= page_content %>"
+                "content": "{{page_content}}"
             },
             {
                 "id": "navigation",
