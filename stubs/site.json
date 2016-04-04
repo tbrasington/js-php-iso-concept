@@ -38,13 +38,7 @@
                     {
                         "id": "navigaton_content",
                         "type": "block",
-                        "content": [
-                            {
-                                "id": "navigaton_list",
-                                "type": "data_source",
-                                "content": "stubs/taxonomy"
-                            }
-                        ]
+                        "content": "{{navigation_file}}"
                     }
                 ]
             }

@@ -6,12 +6,16 @@ class elements {
 	public $head;
 	public $body;
 	
+	private $mustache;
+	
 	function __construct()	{
 		
 		$this->dom = new DOMDocument;
 		$this->html = $this->dom->appendChild($this->dom->createElement('html'));
 		$this->head = $this->html->appendChild($this->dom->createElement('head'));
 		$this->body = $this->html->appendChild($this->dom->createElement('body'));
+		
+		$this->mustache = new Mustache_Engine;
 
 	}
 	
@@ -37,6 +41,13 @@ class elements {
 			}
 
 		}
+	}
+	
+	function finish() {
+				
+		// rener the page out
+		$this->dom->formatOutput = true;
+		return $this->dom->saveHTML();
 	}
 	
 	function block($_data) {
@@ -71,6 +82,37 @@ class elements {
 
 		return $node;		
 	}
+	
+	
+	function a($_data) {
+		
+		$data = $_data;	
+  	
+		$node = $this->dom->createElement("a");
+		
+		$node->setAttribute('id', $data['id']);
+		
+		return $node;		
+	}
+	
+	/*
+function data_source($_data) {
+
+		$data = $_data;	
+
+		$node = $this->dom->createElement("div");
+		
+		$node->setAttribute('id', $data['id']);
+		
+		$data_source = file_get_contents($data['content']);	
+		$json = json_decode($data_source);
+		
+		$child_content = $this->render($json, $node);
+
+
+		return $node;
+	}
+*/
 	
 	function __destruct() {
 		
