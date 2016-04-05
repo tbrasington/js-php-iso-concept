@@ -92,6 +92,10 @@ class elements {
 		
 		$node->setAttribute('id', $data['id']);
 		
+		if(is_string($data['content'])) { 
+			$node->appendChild($this->dom->createTextNode($data['content']));
+		}
+		
 		return $node;		
 	}
 	

@@ -59,6 +59,22 @@
 						]
 					],
 					[
+						"id" => "navigation",
+						"type" =>"block",
+						"content" => [
+							[
+								"id" => "navigation_close",
+								"type" => "block",
+								"content" => "close"
+							],
+							[
+								"id" => "navigaton_content",
+								"type" => "block",
+								"content" => api_call()
+							]
+						]
+					],
+					[
 						"id" => "page_content",
 						"type" =>"block",
 						"content" => "page_content"
@@ -67,16 +83,15 @@
 			]
 		]
 	];
-	
-/*
-	$myObj = (object) [
-    "foo" => "Foo value",
-    "bar" => function($greeting) {
-        return $greeting . " bar";
-    }
-];
-*/
+										 
+	function api_call() {
+		$file = file_get_contents("stubs/navigation.json");
+		return  json_decode($file,true);
+	}
 
+
+
+	// return a json object of the page, just incase
 	if($json_request) {
 		$json_site_structure = json_encode(($site_structure_object), true);
 		echo $json_site_structure;
