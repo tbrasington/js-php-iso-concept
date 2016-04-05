@@ -6,7 +6,7 @@ class elements {
 	public $head;
 	public $body;
 	
-	private $mustache;
+// 	private $mustache;
 	
 	function __construct()	{
 		
@@ -15,12 +15,12 @@ class elements {
 		$this->head = $this->html->appendChild($this->dom->createElement('head'));
 		$this->body = $this->html->appendChild($this->dom->createElement('body'));
 		
-		$this->mustache = new Mustache_Engine;
+// 		$this->mustache = new Mustache_Engine;
 
 	}
 	
 	function render($_data,$parent) {
-		
+		//print_r($_data);
 		foreach ($_data as $attribute) {
 			
 			//print_r($attribute);
