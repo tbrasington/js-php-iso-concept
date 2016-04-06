@@ -11,7 +11,7 @@
 	}
 	
 	// page creator
-	include("elements.php");
+	include("app/php/elements.php");
 	$page = new elements();	
 	
 	// Routing
@@ -88,7 +88,6 @@
 		$file = file_get_contents("stubs/navigation.json");
 		return  json_decode($file,true);
 	}
-
 
 
 	// return a json object of the page, just incase
