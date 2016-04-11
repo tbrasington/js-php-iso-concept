@@ -3,7 +3,27 @@ var elements = function() {
 	var that = this;
 	
 	this.module = {}
-	
+	    
+    /*
+	  
+	  renders new block tag
+	    
+	*/
+    this.module.block = function(data) {
+	 	
+	 	var _data  = data || "";
+	 	var _class_name = _data.content_class || "";
+	 	var _content = _data.content || "";
+ 	 	var base = { 
+	 	 		element :  $("<div />", { "class" :"col  block " + _class_name}),
+	 	 		children_element :  $("<div />", { "class" :"col " }) 
+	 	 	};
+	 	
+	 	base.children_element.appendTo(base.element);
+	 	
+	 	return base;
+    }
+    
 	/*
 	  
 	  renders a new image
@@ -28,48 +48,6 @@ var elements = function() {
 	 	return base;
     }
     
-    	
-    /*
-	  
-	  renders a new text card that has a nice pastel background
-	    
-	*/
-	
-    this.module.text_card = function(data) {
-	 	
-	 	var _data  = data || "";
-	 	var _class_name = _data.content_class || "";
-	 	var _content = _data.content || "";
- 	 	var base = { 
-	 	 		element :  $("<div />", { "class" :"col  text-card margin-2-bottom " + _class_name}),
-	 	 		children_element :  $("<div />", { "class" :"col text-card-content" }) 
-	 	 	};
-	 	
-	 	base.children_element.appendTo(base.element);
-	 	
-	 	return base;
-    }
-    
-    
-    /*
-	  
-	  renders new block tag
-	    
-	*/
-    this.module.block = function(data) {
-	 	
-	 	var _data  = data || "";
-	 	var _class_name = _data.content_class || "";
-	 	var _content = _data.content || "";
- 	 	var base = { 
-	 	 		element :  $("<div />", { "class" :"col  block " + _class_name}),
-	 	 		children_element :  $("<div />", { "class" :"col " }) 
-	 	 	};
-	 	
-	 	base.children_element.appendTo(base.element);
-	 	
-	 	return base;
-    }
 
     /*
 	  
@@ -101,7 +79,30 @@ var elements = function() {
 	 	
 	 	return base;
     }
-
+    
+    
+    	
+    /*
+	  
+	  renders a new text card that has a nice pastel background
+	    
+	*/
+	
+    this.module.text_card = function(data) {
+	 	
+	 	var _data  = data || "";
+	 	var _class_name = _data.content_class || "";
+	 	var _content = _data.content || "";
+ 	 	var base = { 
+	 	 		element :  $("<div />", { "class" :"col  text-card margin-2-bottom " + _class_name}),
+	 	 		children_element :  $("<div />", { "class" :"col text-card-content" }) 
+	 	 	};
+	 	
+	 	base.children_element.appendTo(base.element);
+	 	
+	 	return base;
+    }
+    
 
     /*
 	  
@@ -128,6 +129,11 @@ var elements = function() {
         });
     }
     
+    /*
+		
+		start
+		    
+	*/
     this.render_page = function(data, parent, callback) {
  
         var folder = data.folder || "";
