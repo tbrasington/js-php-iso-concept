@@ -1,0 +1,92 @@
+{
+    "meta": {
+        "custom_class": "page-2"
+    },
+    "page_title": "Page 2",
+    "content": [
+        {
+            "module_type": "text_card",
+            "content_class": "",
+            "content": [
+          
+                {
+                    "module_type": "paragraph",
+                    "content_class": "p1",
+                    "content": "Ut est scaevola partiendo. Eos ut modus eloquentiam, pri at elit ornatus dissentiet. Quaeque euripidis ei quo, ne usu labore facilisi. Illum offendit est cu. Lorem oportere est te.
+"
+                },
+                {
+                    "module_type": "paragraph",
+                    "content_class": "p1",
+                    "content": "URL Test [on request](mailto:hello@email.com)."
+                }
+            ]
+        },
+        {
+            "module_type": "block",
+            "content_class": "center-image-block",
+            "content": [
+                {
+                    "module_type": "block",
+                    "content_class": "ratio ratio-16-9",
+                    "content": [
+                        {
+                            "module_type": "image",
+                            "content": "stubs/files/a.png",
+                            "content_class": "image-1 "
+                        }
+                    ]
+                },
+                {
+                    "module_type": "block",
+                    "content_class": "standard-block",
+                    "content": [
+                        {
+                            "module_type": "heading",
+                            "content_class": "h3 hex-1-type",
+                            "content": "burberry.com mobile and tablet, Design Lead"
+                        },
+                        {
+                            "module_type": "paragraph",
+                            "content_class": "p1  hex-2-type",
+                            "content": "Through the use of app like interactions, large beautiful imagery to create a luxurious digital commerce experience."
+                        }
+                    ]
+                }
+            ]
+        },
+        {
+            "module_type": "block",
+            "content_class": "center-image-block appear",
+            "content": [
+                {
+                    "module_type": "block",
+                    "content_class": " pastel-1-bg margin-1-bottom  gallery-wrapper",
+                    "content": [
+                        {
+                            "module_type": "gallery",
+                            "content_class": "gallery ratio ratio-16-9",
+                            "content": [
+                                {
+                                    "module_type": "image",
+                                    "content": "app/files/public/scarf-dwa.png",
+                                    "content_class": "image-1 ratio ratio-16-9"
+                                },
+                                {
+                                    "module_type": "image",
+                                    "content": "app/files/public/scarf-plp.png",
+                                    "content_class": "image-1 ratio ratio-16-9 image-wrapper"
+                                },
+                                {
+                                    "module_type": "image",
+                                    "content": "app/files/public/scarf-monogram.png",
+                                    "content_class": "image-1 ratio ratio-16-9 image-wrapper"
+                                }
+                            ]
+                        }
+                    ]
+                }
+            ]
+        }
+    ]
+}

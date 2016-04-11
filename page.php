@@ -1,5 +1,4 @@
 <?php
-	
 	// Performance
 	$start = microtime(true);
   
@@ -11,27 +10,12 @@
 	}
 	
 	// page creator
-	include("app/php/elements.php");
+	require("app/php/elements.php");
 	$page = new elements();	
 	
-	// Routing
-	require('libs/php/AltoRouter.php');
-	$router = new AltoRouter();
+	// include any project specific libraries
+	require("stubs/pages/navigation.php");
 	
-	$router->map( 'GET', '/', function() {
-    	$page_content = array();
-	});
-	
-	
-	$router->map( 'GET', '/projects', function() {
-    	$page_content = array();
-	});
-
-
-	
-	$router->map( 'GET', '/cv', function() {
-    	$page_content = array();
-	});
 	
 	// combine the site structure
 	$site_structure_object = (object)  [
@@ -70,30 +54,28 @@
 							[
 								"id" => "navigaton_content",
 								"type" => "block",
-								"content" => api_call()
+								"content" => dummy_api_call($page_id)
 							]
 						]
 					],
 					[
 						"id" => "page_content",
 						"type" =>"block",
-						"content" => "page_content"
+						"content" => $page_content
 					]
 				]
 			]
 		]
 	];
-										 
-	function api_call() {
-		$file = file_get_contents("stubs/navigation.json");
-		return  json_decode($file,true);
-	}
+				
 
-
+		
 	// return a json object of the page, just incase
 	if($json_request) {
+		
 		$json_site_structure = json_encode(($site_structure_object), true);
 		echo $json_site_structure;
+	
 	} else {
 		
 		$page->render($site_structure_object->root, $page->body);
@@ -104,6 +86,11 @@
 		$creationtime = ($end - $start);
 		printf("Page created in %.6f seconds.", $creationtime);
 	}
+	
+
+/*
+
+*/
 
 
 ?>
