@@ -44,12 +44,12 @@
                         {
                             "module_type": "heading",
                             "content_class": "h3 hex-1-type",
-                            "content": "burberry.com mobile and tablet, Design Lead"
+                            "content": "Item heading"
                         },
                         {
                             "module_type": "paragraph",
                             "content_class": "p1  hex-2-type",
-                            "content": "Through the use of app like interactions, large beautiful imagery to create a luxurious digital commerce experience."
+                            "content": "Item description."
                         }
                     ]
                 }
@@ -69,17 +69,17 @@
                             "content": [
                                 {
                                     "module_type": "image",
-                                    "content": "app/files/public/scarf-dwa.png",
+                                    "content": "stubs/files/a.png",
                                     "content_class": "image-1 ratio ratio-16-9"
                                 },
                                 {
                                     "module_type": "image",
-                                    "content": "app/files/public/scarf-plp.png",
+                                    "content": "stubs/files/b.png",
                                     "content_class": "image-1 ratio ratio-16-9 image-wrapper"
                                 },
                                 {
                                     "module_type": "image",
-                                    "content": "app/files/public/scarf-monogram.png",
+                                    "content": "stubs/files/a.png",
                                     "content_class": "image-1 ratio ratio-16-9 image-wrapper"
                                 }
                             ]
