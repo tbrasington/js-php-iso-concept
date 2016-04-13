@@ -3,17 +3,16 @@
         "custom_class": "page-2"
     },
     "page_title": "Page 2",
-    "content": [
+    "root": [
         {
-            "module_type": "text_card",
+            "module_type": "block",
             "content_class": "",
             "content": [
           
                 {
                     "module_type": "paragraph",
                     "content_class": "p1",
-                    "content": "Ut est scaevola partiendo. Eos ut modus eloquentiam, pri at elit ornatus dissentiet. Quaeque euripidis ei quo, ne usu labore facilisi. Illum offendit est cu. Lorem oportere est te.
-"
+                    "content": "Ut est scaevola partiendo. Eos ut modus eloquentiam, pri at elit ornatus dissentiet. Quaeque euripidis ei quo, ne usu labore facilisi. Illum offendit est cu. Lorem oportere est te."
                 },
                 {
                     "module_type": "paragraph",

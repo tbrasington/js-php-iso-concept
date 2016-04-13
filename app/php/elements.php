@@ -1,5 +1,5 @@
 <?php
-class elements {
+class Elements {
 	
 	public $dom;
 	public $html;
@@ -20,13 +20,13 @@ class elements {
 	}
 	
 	function render($_data,$parent) {
-		//print_r($_data);
+		
 		foreach ($_data as $attribute) {
 			
 			//print_r($attribute);
 			
-			$element_type = $attribute['type'];
-			
+			$element_type = $attribute['module_type'];
+
 			if( method_exists($this, $element_type) ) {
 				
 				$node = $this->$element_type($attribute);	
@@ -58,7 +58,7 @@ class elements {
   	
 		$node = $this->dom->createElement("div");
 		
-		$node->setAttribute('id', $data['id']);
+		if(isset($data['id'])) $node->setAttribute('id', $data['id']);
 		
 		
 		if(is_string($data['content'])) { 
@@ -67,6 +67,10 @@ class elements {
 		
 		return $node;
 	}
+	
+	/////////////////////////////////
+	// text, headings, paragraph, links
+	/////////////////////////////////
 	
 	function heading($_data) {
 		
@@ -74,7 +78,7 @@ class elements {
   	
 		$node = $this->dom->createElement("h");
 		
-		$node->setAttribute('id', $data['id']);
+		if(isset($data['id'])) $node->setAttribute('id', $data['id']);
 		
 		if(is_string($data['content'])) { 
 			$node->appendChild($this->dom->createTextNode($data['content']));
@@ -83,6 +87,20 @@ class elements {
 		return $node;		
 	}
 	
+	function paragraph($_data) {
+		
+		$data = $_data;	
+  	
+		$node = $this->dom->createElement("p");
+		
+		if(isset($data['id'])) $node->setAttribute('id', $data['id']);
+		
+		if(is_string($data['content'])) { 
+			$node->appendChild($this->dom->createTextNode($data['content']));
+		}
+
+		return $node;		
+	}
 	
 	function a($_data) {
 		
@@ -90,7 +108,7 @@ class elements {
   	
 		$node = $this->dom->createElement("a");
 		
-		$node->setAttribute('id', $data['id']);
+		if(isset($data['id'])) $node->setAttribute('id', $data['id']);
 		
 		if(is_string($data['content'])) { 
 			$node->appendChild($this->dom->createTextNode($data['content']));
@@ -99,24 +117,25 @@ class elements {
 		return $node;		
 	}
 	
-	/*
-function data_source($_data) {
-
+	/////////////////////////////////
+	// images, gallery
+	/////////////////////////////////
+	
+	function image($_data) {
+		
 		$data = $_data;	
-
-		$node = $this->dom->createElement("div");
+  	
+		$node = $this->dom->createElement("img");
 		
-		$node->setAttribute('id', $data['id']);
+		if(isset($data['id'])) $node->setAttribute('id', $data['id']);
 		
-		$data_source = file_get_contents($data['content']);	
-		$json = json_decode($data_source);
-		
-		$child_content = $this->render($json, $node);
+		if(is_string($data['content'])) { 
+		//	$node->appendChild($this->dom->createTextNode($data['content']));
+		}
 
-
-		return $node;
+		return $node;		
 	}
-*/
+	
 	
 	function __destruct() {
 		

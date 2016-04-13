@@ -3,21 +3,20 @@
         "custom_class": "page-1"
     },
     "page_title": "Page 1",
-    "content": [
+    "root": [
         {
             "module_type": "custom_module",
             "content_class": "custom-module",
             "content": ""
         },
         {
-            "module_type": "text_card",
+            "module_type": "block",
             "content_class": "",
             "content": [
                 {
                     "module_type": "paragraph",
                     "content_class": "p1",
-                    "content": "Lorem ipsum dolor sit amet, sed ut saperet deleniti phaedrum, debet dicant fabulas et sea, platonem abhorreant persequeris eum eu. Insolens consectetuer ad cum. Simul delicata duo ad. Vis et impedit convenire, ex tale persius his.
-"
+                    "content": "Lorem ipsum dolor sit amet, sed ut saperet deleniti phaedrum, debet dicant fabulas et sea, platonem abhorreant persequeris eum eu. Insolens consectetuer ad cum. Simul delicata duo ad. Vis et impedit convenire, ex tale persius his."
                 },
                 {
                     "module_type": "paragraph",

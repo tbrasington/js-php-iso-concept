@@ -2,18 +2,18 @@
 // combine the site structure
 function dummy_api_call($current_page) {
 	
-	$data_object = (object) [
+	$data_object = [
 		[
-			"type" =>"block",
+			"module_type" =>"block",
 			"class_name"=> "menu-item " . ($current_page==='page-1' ? 'selected' : ''),
 			"content" => [
 				[
-					"type" =>"block",
+					"module_type" =>"block",
 					"class_name" => "menu-selected",
 					"content" => "—"
 				],
 				[
-					"type" =>"a",
+					"module_type" =>"a",
 					"class_name" => "menu-list-item",
 					"content" => "Page 1",
 					"href"  =>"/page-1"
@@ -21,16 +21,16 @@ function dummy_api_call($current_page) {
 			]
 		],
 		[
-			"type" =>"block",
+			"module_type" =>"block",
 			"class_name"=> "menu-item ". ($current_page==='page-2' ? 'selected' : ''),
 			"content" => [
 				[
-					"type" =>"block",
+					"module_type" =>"block",
 					"class_name" => "menu-selected",
 					"content" => "—"
 				],
 				[
-					"type" =>"a",
+					"module_type" =>"a",
 					"class_name" => "menu-list-item",
 					"content" => "Page 2",
 					"href"  =>"/page-2"
