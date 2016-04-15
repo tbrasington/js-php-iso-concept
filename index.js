@@ -1,14 +1,9 @@
 (function(){
 
-	var app = function(){
-		
-		var that = this;
+	$(window).on('ready', function(){
 		
 		
 		
-		
-	}
-
-app();
+	});
 
 })();

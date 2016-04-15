@@ -6,48 +6,47 @@
     "root": [
         {
             "module_type": "block",
-            "content_class": "",
+            "class_name": "",
             "content": [
-          
                 {
                     "module_type": "paragraph",
-                    "content_class": "p1",
+                    "class_name": "p1",
                     "content": "Ut est scaevola partiendo. Eos ut modus eloquentiam, pri at elit ornatus dissentiet. Quaeque euripidis ei quo, ne usu labore facilisi. Illum offendit est cu. Lorem oportere est te."
                 },
                 {
                     "module_type": "paragraph",
-                    "content_class": "p1",
+                    "class_name": "p1",
                     "content": "URL Test [on request](mailto:hello@email.com)."
                 }
             ]
         },
         {
             "module_type": "block",
-            "content_class": "center-image-block",
+            "class_name": "center-image-block",
             "content": [
                 {
                     "module_type": "block",
-                    "content_class": "ratio ratio-16-9",
+                    "class_name": "ratio ratio-16-9",
                     "content": [
                         {
                             "module_type": "image",
-                            "content": "stubs/files/a.png",
-                            "content_class": "image-1 "
+                            "content": "stubs/files/b-letter.jpg",
+                            "class_name": "image-1 "
                         }
                     ]
                 },
                 {
                     "module_type": "block",
-                    "content_class": "standard-block",
+                    "class_name": "standard-block",
                     "content": [
                         {
                             "module_type": "heading",
-                            "content_class": "h3 hex-1-type",
+                            "class_name": "h3 hex-1-type",
                             "content": "Item heading"
                         },
                         {
                             "module_type": "paragraph",
-                            "content_class": "p1  hex-2-type",
+                            "class_name": "p1  hex-2-type",
                             "content": "Item description."
                         }
                     ]
@@ -56,30 +55,48 @@
         },
         {
             "module_type": "block",
-            "content_class": "center-image-block appear",
+            "class_name": "center-image-block appear",
             "content": [
                 {
-                    "module_type": "block",
-                    "content_class": " pastel-1-bg margin-1-bottom  gallery-wrapper",
+                    "module_type": "gallery",
+                    "class_name": "gallery ",
                     "content": [
                         {
-                            "module_type": "gallery",
-                            "content_class": "gallery ratio ratio-16-9",
+                            "module_type": "block",
+                            "class_name": "",
                             "content": [
                                 {
-                                    "module_type": "image",
-                                    "content": "stubs/files/a.png",
-                                    "content_class": "image-1 ratio ratio-16-9"
+                                    "module_type": "block",
+                                    "class_name": "gallery-card ratio ratio-16-9",
+                                    "content": [
+                                        {
+                                            "module_type": "image",
+                                            "content": "stubs/files/b-letter.jpg",
+                                            "class_name": " "
+                                        }
+                                    ]
                                 },
                                 {
-                                    "module_type": "image",
-                                    "content": "stubs/files/b.png",
-                                    "content_class": "image-1 ratio ratio-16-9 image-wrapper"
+                                    "module_type": "block",
+                                    "class_name": "gallery-card ratio ratio-16-9",
+                                    "content": [
+                                        {
+                                            "module_type": "image",
+                                            "content": "stubs/files/a-letter.jpg",
+                                            "class_name": ""
+                                        }
+                                    ]
                                 },
                                 {
-                                    "module_type": "image",
-                                    "content": "stubs/files/a.png",
-                                    "content_class": "image-1 ratio ratio-16-9 image-wrapper"
+                                    "module_type": "block",
+                                    "class_name": "gallery-card ratio ratio-16-9",
+                                    "content": [
+                                        {
+                                            "module_type": "image",
+                                            "content": "stubs/files/b-letter.jpg",
+                                            "class_name": " "
+                                        }
+                                    ]
                                 }
                             ]
                         }

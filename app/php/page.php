@@ -40,6 +40,8 @@ class Site {
 		$site_structure_object = (object) [
 			"title" => "Test Site",
 			"meta" => "",
+			"css" => ["app/css/base.css","app/css/elements.css"],
+			"js" => ["libs/js/jquery-2.2.2.min.js", "libs/js/underscore.js", "libs/js/grapnel.js", "app/js/elements.js", "index.js"],
 			"root" => [
 				[
 					"id" => "root",
@@ -95,6 +97,8 @@ class Site {
 		
 		} else {
 			
+			$this->elements->css($site_structure_object->css);
+			$this->elements->js($site_structure_object->js);
 			$this->elements->render($site_structure_object->root, $this->elements->body);
 			echo $this->elements->finish();
 			

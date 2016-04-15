@@ -124,7 +124,7 @@ var elements = function() {
 	                that.render_modules(item.content, module.children_element, folder)
 	            }
             } else {
-	            console.info('module does not exist')
+	            console.info('module does not exist');
             }
         });
     }

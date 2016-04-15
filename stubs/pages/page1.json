@@ -6,26 +6,26 @@
     "root": [
         {
             "module_type": "custom_module",
-            "content_class": "custom-module",
+            "class_name": "custom-module",
             "content": ""
         },
         {
             "module_type": "block",
-            "content_class": "",
+            "class_name": "",
             "content": [
                 {
                     "module_type": "paragraph",
-                    "content_class": "p1",
+                    "class_name": "p1",
                     "content": "Lorem ipsum dolor sit amet, sed ut saperet deleniti phaedrum, debet dicant fabulas et sea, platonem abhorreant persequeris eum eu. Insolens consectetuer ad cum. Simul delicata duo ad. Vis et impedit convenire, ex tale persius his."
                 },
                 {
                     "module_type": "paragraph",
-                    "content_class": "p1",
+                    "class_name": "p1",
                     "content": "Ex per atqui mucius vulputate, his soleat propriae te. Salutatus vituperata has ex, ad sea copiosae adipisci. Quas utinam pericula nec te, his adipisci postulant ut. Et fastidii expetendis scripserit eam. An eos albucius omittantur, eos nisl posidonium an. Eu quo verear minimum."
                 },
                 {
                     "module_type": "paragraph",
-                    "content_class": "p1",
+                    "class_name": "p1",
                     "content": "Nam cu animal officiis persequeris, te ius mollis option. Ad cibo dicunt detraxit mei. Vis an omnesque dissentiet, id mel legimus volumus, te diam convenire est. Ullum salutandi expetendis te eum, vel nibh timeam an, debitis eleifend platonem no est. Id amet harum atomorum vim."
                 }
             ]

@@ -1,0 +1,66 @@
+/*
+	Basic blocks
+		
+*/
+
+.basics {
+	position: relative;
+	float: left;
+	width: 100%;
+	height: auto;
+}
+/*
+	Padding
+		
+*/
+
+
+/*
+	Typograpy
+*/
+
+
+
+/*
+	Ratios for controlling image and video heights	
+*/
+.ratio {
+	width: 100%;
+	height: auto;
+	position: relative;
+	float: left;
+}
+	.ratio-16-9:before {
+	  display: block;
+	  content: " ";
+	  width: 100%;
+	  padding-top: 56.25%;
+	}
+	
+	.ratio img, .ratio div {
+		width: 100%;
+		position: absolute;
+		top: 0;
+		left: 0;
+		right: 0;
+		bottom: 0;
+	}
+	
+	
+	
+/*
+	Gallery	
+*/	
+	
+.gallery {
+	position: relative;
+	float: left;
+	width: 100%;
+	height: auto;
+}
+
+.gallery .gallery-card {
+	width: 100%;
+	top:0;
+	position: absolute;
+}
