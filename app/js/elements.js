@@ -1,6 +1,8 @@
-var Elements = function() {
+var Elements = function(options) {
 	
 	var that = this;
+	
+	var options = options || {}
 	
 	this.module = {}
 	
@@ -74,11 +76,12 @@ var Elements = function() {
 	 	var _data  = data || "";
 	 	var _class_name = _data.class_name || "";
 	 	var _content = _data.content || "";
+	 	var unique_id = _.uniqueId();
  	 	var base = { 
  	 		elements :  {
-	 	 		node: $("<div />", { "class" :"gallery" + _class_name}),
-	 	 		child: $("<div />", { "class" :"gallery-card-container"}),
-	 	 		numbers: $("<div />", { "class" :"gallery-numbers"})
+	 	 		node: $("<div />", { "class" :"gallery" + _class_name, "id" : "gallery-"+unique_id}),
+	 	 		child: $("<div />", { "class" :"gallery-card-container", "id" : "gallery-card-container-"+unique_id}),
+	 	 		numbers: $("<div />", { "class" :"gallery-numbers", "id" : "gallery-numbers-"+unique_id})
 	 	 	}
  	 	};
  	 	
@@ -177,6 +180,21 @@ var Elements = function() {
 	 	return base;
     }
     
+    
+    // event delegations
+    this.events = function() {
+	    
+	    // check that we have a root to delegate off
+	    if(options.root) {
+		    
+		    // events for the gallery
+		    module_events_gallery(options.root);
+		    
+	    } else {
+		    // there is no root set so don't bother
+	    }
+	    
+    }
     
 	
 	return that;

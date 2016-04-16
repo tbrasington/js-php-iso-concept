@@ -145,8 +145,14 @@ class Elements {
 		$node_children->setAttribute('class', 'gallery-card-container');
 		$node->appendChild($node_children);
 		
-		if(isset($data['id'])) $node->setAttribute('id', $data['id']);
-			if(isset($data['class_name']))  { 
+		// we set a unique id to prop changes
+		$gallery_id = uniqid();
+		
+		// set the id for the gallery 
+		$node->setAttribute('id', 'gallery-' . $gallery_id);
+		$node_children->setAttribute('id', 'gallery-card-container-'.$gallery_id);
+		
+		if(isset($data['class_name']))  { 
 			$node->setAttribute('class', "gallery " . $data['class_name']);
 		} else {
 			$node->setAttribute('class', "gallery");
@@ -157,13 +163,15 @@ class Elements {
 		if($total_numbers>1){
 			$numbers = $this->dom->createElement("div");
 			$numbers->setAttribute('class', 'gallery-numbers');
+			$numbers->setAttribute('id', 'gallery-numbers-'.$gallery_id);
 			
 			$node->appendChild($numbers);
 			
 			for($a = 0; $a<$total_numbers; $a++) {
 					
 				$number = $this->dom->createElement("div");
-				$number->setAttribute('class', 'gallery-number');
+				$number->setAttribute('class', 'gallery-number' . ($a===0 ? " selected":""));
+				$number->setAttribute('data-position', $a);
 				$number->appendChild($this->dom->createTextNode(ceil(1+$a)));
 				$numbers->appendChild($number);
 			}

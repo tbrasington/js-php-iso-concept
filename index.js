@@ -11,7 +11,12 @@
 		}
 		
 		// set up our page render
-		var render_elements = new Elements();
+		var render_elements = new Elements({
+			root : dom_elements.page_content
+		});
+			
+		// i want events
+		render_elements.events();	
 			
 		// routers
 		// handle the routing
@@ -29,7 +34,9 @@
 
 			
 		}).get('page-2', function(req, e) {
+			
 			load_page('api/page/page-2');
+		
 		});
 		
 		// click events

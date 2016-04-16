@@ -39,7 +39,8 @@
 				"content": "Item description."
 			}]
 		}]
-	}, {
+	}, 
+	{
 		"module_type": "block",
 		"class_name": "center-image-block appear",
 		"content": [{
@@ -49,7 +50,7 @@
 
 				{
 					"module_type": "block",
-					"class_name": "gallery-card ratio ratio-16-9",
+					"class_name": "gallery-card gallery-current ratio ratio-16-9",
 					"content": [{
 						"module_type": "image",
 						"content": "stubs/files/b-letter.jpg",
@@ -75,5 +76,52 @@
 				}
 			]
 		}]
-	}]
+	}, 
+	{
+		"module_type": "block",
+		"class_name": "center-image-block appear",
+		"content": [{
+			"module_type": "gallery",
+			"class_name": "",
+			"content": [
+
+				{
+					"module_type": "block",
+					"class_name": "gallery-card gallery-current  ratio ratio-16-9",
+					"content": [{
+						"module_type": "image",
+						"content": "stubs/files/a-letter.jpg",
+						"class_name": " "
+					}]
+				}, {
+					"module_type": "block",
+					"class_name": "gallery-card ratio ratio-16-9",
+					"content": [{
+						"module_type": "image",
+						"content": "stubs/files/b-letter.jpg",
+						"class_name": ""
+					}]
+				}, {
+					"module_type": "block",
+					"class_name": "gallery-card ratio ratio-16-9",
+					"content": [{
+						"module_type": "image",
+						"content": "stubs/files/a-letter.jpg",
+						"class_name": " "
+					}]
+
+				},
+				{
+					"module_type": "block",
+					"class_name": "gallery-card ratio ratio-16-9",
+					"content": [{
+						"module_type": "image",
+						"content": "stubs/files/a-letter.jpg",
+						"class_name": " "
+					}]
+				}
+			]
+		}]
+	}
+	]
 }

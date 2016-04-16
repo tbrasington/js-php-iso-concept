@@ -67,12 +67,32 @@ class Site {
 	
 	function render() {
 		
+		if(ENV==='DEV') {
+			
+			$js_files = [
+			// libraries
+			"libs/js/jquery-2.2.2.min.js", "libs/js/underscore.js", "libs/js/grapnel.js", 
+			// element modules
+			"app/js/elements.js", 
+				"app/js/modules/gallery.js", 
+			// custom / generic app starter
+			"index.js"
+			];
+			
+			
+			$css_files = ["app/css/base.css","app/css/elements.css"];
+
+		} else {
+			$js_files = ["deploy/js/concat.min.js"];
+			$css_files = ["deploy/css/concat.min.css"];
+		}
+		
 		// combine the site structure
 		$site_structure_object = (object) [
 			"title" => "Test Site",
 			"meta" => "",
-			"css" => ["app/css/base.css","app/css/elements.css"],
-			"js" => ["libs/js/jquery-2.2.2.min.js", "libs/js/underscore.js", "libs/js/grapnel.js", "app/js/elements.js", "index.js"],
+			"css" => $css_files,
+			"js" => $js_files,
 			"root" => [
 				[
 					"id" => "root",
