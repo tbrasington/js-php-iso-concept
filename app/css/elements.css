@@ -57,6 +57,7 @@
 	float: left;
 	width: 100%;
 	height: auto;
+	margin-bottom: 25px;
 }
 
 .gallery .gallery-card {
@@ -82,8 +83,8 @@
 	height: auto;
 }
 
-.gallery .gallery-card-numbers {
-
+.gallery .gallery-numbers {
+	padding: 25px 0;
 }
 
 .gallery .gallery-number {
@@ -100,8 +101,10 @@
 .gallery .gallery-arrows {
 	position: absolute;
 	width: 20%;
-	height: calc(100% - 25px);
+	height: 60%;
 	z-index: 2;
+	cursor: pointer;
+	top:10%;
 }
 
 	.gallery .gallery-arrows.gallery-right {
