@@ -16,7 +16,7 @@ function dummy_api_call($current_page) {
 					"module_type" =>"a",
 					"class_name" => "menu-list-item",
 					"content" => "Page 1",
-					"href"  =>"/page-1"
+					"href"  =>""
 				]
 			]
 		],
@@ -33,7 +33,7 @@ function dummy_api_call($current_page) {
 					"module_type" =>"a",
 					"class_name" => "menu-list-item",
 					"content" => "Page 2",
-					"href"  =>"/page-2"
+					"href"  =>"page-2"
 				]
 			]
 		]

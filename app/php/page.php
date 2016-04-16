@@ -18,6 +18,10 @@ class Site {
 		$this->page_id = 'page-1';
 		$obj=json_decode(file_get_contents('stubs/pages/page1.json'),true);
 		$this->page_content = $obj['root'];
+		
+		
+		// render out the page html
+		$this->render();
 
 	}
 	
@@ -25,16 +29,43 @@ class Site {
 		$this->page_id = 'page-2';
 		$obj=json_decode(file_get_contents('stubs/pages/page2.json'),true);
 		$this->page_content = $obj['root'];
+		
+		// render out the page html
+		$this->render();
 	}
 	
 	function generic($id) {
 		$this->page_id = '';
 		$this->page_content = 'generic' . $id['page'];
 		
-	}
-
-	function __destruct()	{
 		
+		// render out the page html
+		$this->render();
+		
+	}
+	
+	// basic remapping to json file
+	function api($id) {
+		
+		$page_id =  $id['page'];
+		
+		// would be a db query of sorts
+		if($page_id==='page-1'){
+			$file = 'page1';
+		} else if($page_id==='page-2'){
+			$file = 'page2';
+		} else {
+			//404
+		}
+		
+		$obj=json_decode(file_get_contents('stubs/pages/'.$file.'.json'),true);
+ 
+		$json_site_structure = json_encode($obj, true);
+		echo $json_site_structure;
+		
+	}
+	
+	function render() {
 		
 		// combine the site structure
 		$site_structure_object = (object) [
@@ -96,7 +127,7 @@ class Site {
 			echo $json_site_structure;
 		
 		} else {
-			
+			$this->elements->page_header();
 			$this->elements->css($site_structure_object->css);
 			$this->elements->js($site_structure_object->js);
 			$this->elements->render($site_structure_object->root, $this->elements->body);
@@ -108,7 +139,12 @@ class Site {
 				$creationtime = ($end - $this->start);
 				printf("Page created in %.6f seconds.", $creationtime);
 			}
-		}	
+		}
+	}
+
+	function __destruct()	{
+		
+			
 	}
 }
 

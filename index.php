@@ -23,6 +23,7 @@
 	$router->map('GET', '/', "Site#index");
 	$router->map('GET', '/page-2', "Site#page2"); 
 	$router->map('GET', '/page/[*:page]', "Site#generic"); 
+	$router->map('GET', '/api/page/[*:page]', "Site#api"); 
 
 				
 	// match current request url
