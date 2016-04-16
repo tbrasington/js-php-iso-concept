@@ -44,7 +44,7 @@
 		"class_name": "center-image-block appear",
 		"content": [{
 			"module_type": "gallery",
-			"class_name": "gallery ",
+			"class_name": "",
 			"content": [
 
 				{

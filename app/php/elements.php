@@ -146,8 +146,11 @@ class Elements {
 		$node->appendChild($node_children);
 		
 		if(isset($data['id'])) $node->setAttribute('id', $data['id']);
-		if(isset($data['class_name'])) $node->setAttribute('class', $data['class_name']);
-
+			if(isset($data['class_name']))  { 
+			$node->setAttribute('class', "gallery " . $data['class_name']);
+		} else {
+			$node->setAttribute('class', "gallery");
+		}
 		
 		// create the numbers 
 		$total_numbers = sizeof($data['content']);

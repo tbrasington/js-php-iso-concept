@@ -76,12 +76,27 @@ var Elements = function() {
 	 	var _content = _data.content || "";
  	 	var base = { 
  	 		elements :  {
-	 	 		node: $("<div />", { "class" :"gallery " + _class_name}),
-	 	 		child: $("<div />", { "class" :"gallery-container "})
+	 	 		node: $("<div />", { "class" :"gallery" + _class_name}),
+	 	 		child: $("<div />", { "class" :"gallery-card-container"}),
+	 	 		numbers: $("<div />", { "class" :"gallery-numbers"})
 	 	 	}
  	 	};
-	 	
+ 	 	
+	 	// render the container for the gallery
 	 	base.elements.child.appendTo(base.elements.node);
+	 	
+	 	// count the numbers
+	 	var total_numbers = _.size(_content);
+	 	if(total_numbers>1) {
+	 		// render the numbers
+	 		base.elements.numbers.appendTo(base.elements.node);
+		 	for(var a =0; a<total_numbers; a++){
+			 	var number = $("<div />", { "class" :"gallery-number", "text" : Math.ceil(a+1)}).appendTo(base.elements.numbers);
+		 	}
+		 	
+		 	var left_arrow = $("<div />", { "class" :"gallery-arrows gallery-left"}).appendTo(base.elements.node);
+		 	var right_arrow = $("<div />", { "class" :"gallery-arrows gallery-right"}).appendTo(base.elements.node);
+	 	}
 	 	
 	 	return base;
     }
