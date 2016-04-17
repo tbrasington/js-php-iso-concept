@@ -17,30 +17,36 @@ var Elements = function(options) {
 
         _.each(data, function(item, index) {
 
-       //
-  	        if(that.module[item.module_type] !== undefined) {
-	           
-	            var module = new that.module[item.module_type](item);
+			fastdom.mutate(function() {
+		
+			    if(that.module[item.module_type] !== undefined) {
+		           
+		            var module = new that.module[item.module_type](item);
+						
+					// When we have as more complex node
+					if(module.elements.node) {
+						
+						module.elements.node.appendTo(parent);
+						var target = module.elements.child
 					
-				// When we have as more complex node
-				if(module.elements.node) {
-					module.elements.node.appendTo(parent);
-					var target = module.elements.child
-					console.log(target)
-				} else {
-					module.elements.appendTo(parent);
-					target = module.elements;
-				}
-	      
-	            // has children render more
-	            if (typeof(item.content) === 'object') {
-	                that.render_modules(item.content, target, folder)
-	            }
-		            
-            } else {
-	            console.info('module does not exist');
-            }
-        });
+					} else {
+						
+						module.elements.appendTo(parent);
+					
+						target = module.elements;
+					}
+		      
+		            // has children render more
+		            if (typeof(item.content) === 'object') {
+		                that.render_modules(item.content, target, folder)
+		            }
+			            
+		        } else {
+		            console.info('module does not exist');
+		        }
+    		});
+        
+         });
     }
     
     
