@@ -71,7 +71,7 @@ class Site {
 			
 			$js_files = [
 			// libraries
-			"libs/js/jquery-2.2.2.min.js", "libs/js/underscore.js", "libs/js/grapnel.js", 
+			"libs/js/jquery-2.2.2.min.js", "libs/js/underscore.js", "libs/js/grapnel.js",  "libs/js/fastdom.js", 
 			// element modules
 			"app/js/elements.js", 
 				"app/js/modules/gallery.js", 
@@ -149,8 +149,10 @@ class Site {
 		} else {
 			$this->elements->page_header();
 			$this->elements->css($site_structure_object->css);
-			$this->elements->js($site_structure_object->js);
 			$this->elements->render($site_structure_object->root, $this->elements->body);
+			
+			$this->elements->js($site_structure_object->js, $this->elements->body);
+			
 			echo $this->elements->finish();
 			
 			// Performance

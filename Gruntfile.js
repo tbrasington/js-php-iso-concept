@@ -15,7 +15,7 @@ module.exports = function(grunt) {
       jsfiles: {
 	      src: [
 			// libraries
-			"libs/js/jquery-2.2.2.min.js", "libs/js/underscore.js", "libs/js/grapnel.js", 
+			"libs/js/jquery-2.2.2.min.js", "libs/js/underscore.js", "libs/js/grapnel.js", "libs/js/fastdom.js", 
 			// element modules
 			"app/js/elements.js", 
 				"app/js/modules/gallery.js", 

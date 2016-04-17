@@ -1,5 +1,5 @@
 <?php
-
+	// DEV ||  LIVE
 	define('ENV', 'DEV');
 	define('PERF', false);
 	

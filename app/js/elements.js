@@ -94,7 +94,7 @@ var Elements = function(options) {
 	 		// render the numbers
 	 		base.elements.numbers.appendTo(base.elements.node);
 		 	for(var a =0; a<total_numbers; a++){
-			 	var number = $("<div />", { "class" :"gallery-number", "text" : Math.ceil(a+1)}).appendTo(base.elements.numbers);
+			 	var number = $("<div />", { "class" :"gallery-number"+(a===0?" selected":""), "text" : Math.ceil(a+1)}).appendTo(base.elements.numbers);
 		 	}
 		 	
 		 	var left_arrow = $("<div />", { "class" :"gallery-arrows gallery-left"}).appendTo(base.elements.node);
